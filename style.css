@@ -1,0 +1,97 @@
+/* Основные стили */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+}
+
+.container {
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+button {
+    padding: 16px 32px;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #ff6a00, #ee0979);
+    color: white;
+    transition: transform 0.2s, background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Стили для кнопки "Нет" */
+button#noButton {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+button:hover {
+    opacity: 0.8;
+    transform: translateY(-5px);
+}
+
+/* Анимация при наведении на кнопку "Нет" */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+/* Стили для кнопки "Нет", когда на неё наводят */
+button#noButton:hover {
+    animation: shake 0.5s ease-in-out;
+}
+
+/* Адаптивность для экранов от 768px и выше */
+@media (max-width: 768px) {
+    button {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+}
+
+/* Адаптивность для экранов от 480px и выше */
+@media (max-width: 480px) {
+    button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+}
